@@ -1,3 +1,5 @@
+package Clases;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -30,16 +32,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName());
 
-  public VentanaPrincipal() {
+ public VentanaPrincipal() {
+        // 1. Centrar la ventana primero
+        this.setLocationRelativeTo(null);
+        
+        // 2. Cargar los botones y componentes visuales
         initComponents();
         
-        // Activar el motor visual de GraphStream en modo Swing
+        // 3. Activar el motor visual de GraphStream después de cargar todo
         System.setProperty("org.graphstream.ui", "swing");
-        
-        // Centrar la aplicacion en la pantalla al abrirse
-        this.setLocationRelativeTo(null);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -67,9 +69,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
+
+        PanelMenu.setBackground(new java.awt.Color(102, 204, 255));
+
+        jButton1.setBackground(new java.awt.Color(51, 255, 51));
         jButton1.setText("Cargar Neuronas (CSV)");
         jButton1.addActionListener(this::jButton1ActionPerformed);
 
+        jButton2.setBackground(new java.awt.Color(102, 255, 102));
         jButton2.setText("Cargar Neurotransmisores");
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
@@ -79,11 +87,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(PanelMenuLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                .addGroup(PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(36, 36, 36))
         );
         PanelMenuLayout.setVerticalGroup(
@@ -96,6 +102,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
+        PanelControl.setBackground(new java.awt.Color(204, 255, 204));
+
+        jLabel1.setBackground(new java.awt.Color(102, 255, 102));
         jLabel1.setText("Neurona Origen");
 
         cmbOrigen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -104,12 +113,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         cmbDestino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jButton3.setBackground(new java.awt.Color(255, 51, 51));
         jButton3.setText("Analisar zonas (BFS/DFS)");
         jButton3.addActionListener(this::jButton3ActionPerformed);
 
+        jButton4.setBackground(new java.awt.Color(51, 0, 255));
         jButton4.setText("Calcular Ruta (Dijkstra)");
         jButton4.addActionListener(this::jButton4ActionPerformed);
 
+        jButton5.setBackground(new java.awt.Color(204, 204, 255));
         jButton5.setText("Limpiar Pantalla");
         jButton5.addActionListener(this::jButton5ActionPerformed);
 
