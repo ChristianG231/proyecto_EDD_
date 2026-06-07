@@ -105,15 +105,15 @@ public class DiccionarioNeurotransmisores {
     /**
      * Elimina un neurotransmisor por su ID.
      *
-     * @param id Código a eliminar.
-     * @return {@code true} si se eliminó.
+     * @param id C&oacute;digo a eliminar.
+     * @return {@code true} si se elimin&oacute.
      */
     public boolean eliminar(String id) {
         return tabla.eliminar(id);
     }
 
     /**
-     * Vacía el diccionario.
+     * Vac&iacute;a el diccionario.
      */
     public void vaciar() {
         this.tabla = new TablaHash<>(53);
@@ -127,7 +127,7 @@ public class DiccionarioNeurotransmisores {
     }
 
     /**
-     * @return {@code true} si está vacío.
+     * @return {@code true} si est&aacute vac&iacute;o.
      */
     public boolean estaVacio() {
         return tabla.estaVacia();
