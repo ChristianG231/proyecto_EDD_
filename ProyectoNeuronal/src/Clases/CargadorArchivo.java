@@ -16,7 +16,7 @@ public class CargadorArchivo {
 
     /**
      * Carga una red neuronal desde un archivo CSV seleccionado por el usuario.
-     * Formato esperado: origen, destino, distancia, ID_Neurotransmisor, coheficiente_eficiencia_sináptica.
+     * Formato esperado: origen, destino, distancia, ID_Neurotransmisor, coheficiente_eficiencia_sin&aacute;ptica.
      * Si ya hay datos en memoria, pregunta al usuario si desea sobrescribir.
      *
      * @param red  Red neuronal donde se almacenarán los datos (se limpiará si se sobrescribe).
