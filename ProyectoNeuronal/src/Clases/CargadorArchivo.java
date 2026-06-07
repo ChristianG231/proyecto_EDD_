@@ -1,4 +1,4 @@
-package clases;
+package Clases;
 
 import javax.swing.*;
 import java.io.*;
