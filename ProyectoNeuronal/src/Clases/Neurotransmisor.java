@@ -1,7 +1,7 @@
 package clases;
 
 /**
- * Representa un neurotransmisor con sus propiedades químicas.
+ * Representa un neurotransmisor con sus propiedades qu&iacute;micas.
  * Sus atributos son inmutables una vez creado.
  *
  * @author ischl
@@ -16,11 +16,11 @@ public class Neurotransmisor {
     /**
      * Constructor.
      *
-     * @param id          Código único.
+     * @param id          C&oacute;digo &uacute;nico.
      * @param nombre      Nombre completo.
      * @param efecto      Tipo de efecto.
-     * @param velocidad   Factor de velocidad (v) para la fórmula del tiempo.
-     * @param descripcion Descripción breve.
+     * @param velocidad   Factor de velocidad (v) para la f&oacute;rmula del tiempo.
+     * @param descripcion Descripci&oacute;n breve.
      */
     public Neurotransmisor(String id, String nombre, String efecto, double velocidad, String descripcion) {
         this.id = id;
@@ -59,7 +59,7 @@ public class Neurotransmisor {
     }
 
     /**
-     * @return Descripción.
+     * @return Descripci&oacute;n.
      */
     public String getDescripcion() {
         return descripcion;
