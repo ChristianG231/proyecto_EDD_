@@ -8,7 +8,7 @@ import Edd.Cola;
 import Edd.Nodo;
 
 /**
- * Algoritmo de búsqueda en anchura (BFS) aplicado a la red neuronal.
+ * Algoritmo de b&uacute;squeda en anchura (BFS) aplicado a la red neuronal.
  * Determina el conjunto de neuronas alcanzables desde un nodo fuente.
  *
  * @author chris
