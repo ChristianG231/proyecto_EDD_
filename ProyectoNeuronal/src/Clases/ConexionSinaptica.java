@@ -1,9 +1,9 @@
 package clases;
 
 /**
- * Representa una conexión sináptica dirigida entre dos neuronas.
- * Contiene la información necesaria para calcular el tiempo de transmisión
- * según la fórmula: tiempo = distancia / (velocidad * k).
+ * Representa una conexi&oacute;n sin&aacute;ptica dirigida entre dos neuronas.
+ * Contiene la informaci&oacute;n necesaria para calcular el tiempo de transmisi&oacute;n
+ * seg&uacute;n la f&oacute;rmula: tiempo = distancia / (velocidad * k).
  *
  * @author ischl
  */
@@ -17,8 +17,8 @@ public class ConexionSinaptica {
     /**
      * Constructor completo.
      *
-     * @param origen Neurona presináptica.
-     * @param destino Neurona postsináptica.
+     * @param origen Neurona presin&aacute;ptica.
+     * @param destino Neurona postsi&aacute;áptica.
      * @param distancia Distancia sináptica (generalmente entre 0 y 1).
      * @param idNeurotransmisor Identificador del neurotransmisor.
      * @param coeficienteEficiencia Factor k (valor entre 0 y 1).
