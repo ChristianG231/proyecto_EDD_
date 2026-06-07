@@ -10,16 +10,17 @@ import Edd.Nodo;
  * así como guardar la red modificada.
  * Utiliza JFileChooser y muestra alertas con JOptionPane.
  *
+ * @author ischl
  */
 public class CargadorArchivo {
 
     /**
      * Carga una red neuronal desde un archivo CSV seleccionado por el usuario.
-     * Formato: origen, destino, distancia, ID_Neurotransmisor, coheficiente_eficiencia_sináptica.
-     * Si ya hay datos, pregunta si sobrescribir.
+     * Formato esperado: origen, destino, distancia, ID_Neurotransmisor, coheficiente_eficiencia_sináptica.
+     * Si ya hay datos en memoria, pregunta al usuario si desea sobrescribir.
      *
-     * @param red  Red neuronal donde se almacenarán los datos.
-     * @param dicc Diccionario de neurotransmisores (para validar).
+     * @param red  Red neuronal donde se almacenarán los datos (se limpiará si se sobrescribe).
+     * @param dicc Diccionario de neurotransmisores para validar existencia de los IDs.
      */
     public void cargarRedNeuronal(redNeuronal red, DiccionarioNeurotransmisores dicc) {
         if (!red.estaVacia()) {
@@ -82,9 +83,10 @@ public class CargadorArchivo {
 
     /**
      * Carga un diccionario de neurotransmisores desde un archivo CSV.
-     * Formato: id, nombre, efecto, velocidad, descripcion.
+     * Formato esperado: id, nombre, efecto, velocidad, descripcion.
+     * Si ya hay un diccionario cargado, pregunta si se desea reemplazar.
      *
-     * @param dicc Diccionario a actualizar.
+     * @param dicc Diccionario a actualizar (se vaciará si se confirma).
      */
     public void cargarDiccionario(DiccionarioNeurotransmisores dicc) {
         if (!dicc.estaVacio()) {
@@ -104,7 +106,7 @@ public class CargadorArchivo {
         File archivo = fileChooser.getSelectedFile();
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String linea;
-            br.readLine(); 
+            br.readLine();
             int cargados = 0;
             while ((linea = br.readLine()) != null) {
                 String[] datos = linea.split(",", 5);
@@ -130,9 +132,9 @@ public class CargadorArchivo {
 
     /**
      * Guarda la red neuronal actual en un archivo CSV.
-     * Formato de salida idéntico al de entrada.
+     * Formato de salida idéntico al de entrada: origen, destino, distancia, ID_Neurotransmisor, coheficiente_eficiencia_sináptica.
      *
-     * @param red Red neuronal a guardar.
+     * @param red Red neuronal a guardar (debe contener conexiones).
      */
     public void guardarRedNeuronal(redNeuronal red) {
         if (red.estaVacia() || red.getTodasLasConexiones().estaVacia()) {
@@ -169,6 +171,13 @@ public class CargadorArchivo {
         }
     }
 
+    /**
+     * Método auxiliar para obtener una neurona por ID; si no existe, la crea y la agrega a la red.
+     *
+     * @param red Red neuronal.
+     * @param id  Identificador de la neurona.
+     * @return Neurona existente o recién creada.
+     */
     private Neurona obtenerOCrearNeurona(redNeuronal red, String id) {
         Neurona n = red.buscarNeurona(id);
         if (n == null) {
