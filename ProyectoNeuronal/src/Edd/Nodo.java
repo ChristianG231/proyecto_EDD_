@@ -1,30 +1,54 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Edd;
 
 /**
+ * Nodo genérico para estructuras enlazadas (listas, pilas, colas).
  *
+ * @param <T> Tipo de dato almacenado.
  * @author chris
  */
-
-/**
- * Clase genérica para representar un eslab$accute;on en cualquier estructura enlazada.
- */
 public class Nodo<T> {
-    private T dato;          
-    private Nodo<T> siguiente; 
+    private T dato;
+    private Nodo<T> siguiente;
 
+    /**
+     * Constructor.
+     *
+     * @param dato Dato a almacenar.
+     */
     public Nodo(T dato) {
         this.dato = dato;
         this.siguiente = null;
     }
 
-    // Getters y Setters
-    public T getDato() { return dato; }
-    public void setDato(T dato) { this.dato = dato; }
+    /**
+     * @return El dato almacenado.
+     */
+    public T getDato() {
+        return dato;
+    }
 
-    public Nodo<T> getSiguiente() { return siguiente; }
-    public void setSiguiente(Nodo<T> siguiente) { this.siguiente = siguiente; }
+    /**
+     * Actualiza el dato.
+     *
+     * @param dato Nuevo valor.
+     */
+    public void setDato(T dato) {
+        this.dato = dato;
+    }
+
+    /**
+     * @return El siguiente nodo.
+     */
+    public Nodo<T> getSiguiente() {
+        return siguiente;
+    }
+
+    /**
+     * Asigna el siguiente nodo.
+     *
+     * @param siguiente Nodo a enlazar.
+     */
+    public void setSiguiente(Nodo<T> siguiente) {
+        this.siguiente = siguiente;
+    }
 }
