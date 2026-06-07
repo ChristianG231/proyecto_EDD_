@@ -18,9 +18,9 @@ public class BFS {
     /**
      * Ejecuta BFS desde una neurona con identificador dado.
      *
-     * @param red      Red neuronal.
+     * @param red Red neuronal.
      * @param idInicio Identificador de la neurona fuente.
-     * @return Lista enlazada con las neuronas alcanzables (incluye la fuente).
+     * @return Lista enlazada con las neuronas alcanzables.
      */
     public ListaEnlazada<Neurona> BFS(redNeuronal red, String idInicio) {
         ListaEnlazada<Neurona> visitados = new ListaEnlazada<>();
