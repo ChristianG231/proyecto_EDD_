@@ -12,14 +12,23 @@ import Edd.Cola;
 import Edd.Nodo;
 
 /**
+ * Algoritmo de b&uacute;squeda en anchura (BFS) aplicado a la red neuronal.
+ * Determina el conjunto de neuronas alcanzables desde un nodo fuente.
  *
  * @author chris
  */
 public class BFS {
+
+    /**
+     * Ejecuta BFS desde una neurona con identificador dado.
+     *
+     * @param red Red neuronal.
+     * @param idInicio Identificador de la neurona fuente.
+     * @return Lista enlazada con las neuronas alcanzables.
+     */
     public ListaEnlazada<Neurona> BFS(redNeuronal red, String idInicio) {
         ListaEnlazada<Neurona> visitados = new ListaEnlazada<>();
         Neurona inicio = red.buscarNeurona(idInicio);
-        
         if (inicio == null) return visitados;
 
         Cola<Neurona> cola = new Cola<>();
@@ -28,8 +37,6 @@ public class BFS {
 
         while (!cola.estaVacia()) {
             Neurona actual = cola.desencolar();
-
-            //** se usa la lista de conexiones de la neurona**/ 
             Nodo<ConexionSinaptica> temp = actual.getConexionesSalientes().getCabeza();
             while (temp != null) {
                 Neurona vecino = temp.getDato().getDestino();
@@ -42,6 +49,6 @@ public class BFS {
         }
         return visitados;
     }
-    
-    
 }
+    
+  
