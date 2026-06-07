@@ -63,7 +63,7 @@ public class redNeuronal {
      * Elimina una neurona y todas las conexiones que la involucran (como origen o destino).
      *
      * @param id Identificador de la neurona a eliminar.
-     * @return {@code true} si se eliminó correctamente, {@code false} si no existía.
+     * @return {@code true} si se elimin&oacute correctamente, {@code false} si no exist&iacute;a.
      */
     public boolean eliminarNeurona(String id) {
         Neurona aEliminar = buscarNeurona(id);
@@ -106,8 +106,8 @@ public class redNeuronal {
     }
 
     /**
-     * Agrega una conexión sináptica a la red. Actualiza la lista de salientes de la neurona origen
-     * y almacena la conexión globalmente.
+     * Agrega una conexión sin&aacute;ptica a la red. Actualiza la lista de salientes de la neurona origen
+     * y almacena la conexi&oacute;n globalmente.
      *
      * @param cs Conexión a agregar.
      */
@@ -156,7 +156,7 @@ public class redNeuronal {
     }
 
     /**
-     * Vacía completamente la red, eliminando todas las neuronas y conexiones.
+     * Vac&iacute;a completamente la red, eliminando todas las neuronas y conexiones.
      */
     public void limpiar() {
         this.todasLasNeuronas = new ListaEnlazada<>();
@@ -166,7 +166,7 @@ public class redNeuronal {
     /**
      * Indica si la red no contiene neuronas.
      *
-     * @return {@code true} si está vacía, {@code false} en caso contrario.
+     * @return {@code true} si está vac&iacute;a, {@code false} en caso contrario.
      */
     public boolean estaVacia() {
         return todasLasNeuronas.estaVacia();
