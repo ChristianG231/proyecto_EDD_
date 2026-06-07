@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package clases;
+package Clases;
 
 import Edd.ListaEnlazada;
 import Edd.Nodo;
@@ -54,8 +54,8 @@ public class AnalizadorConectividad {
     /**
      * Determina las zonas aisladas (neuronas no alcanzables) desde una neurona fuente.
      *
-     * @param red        Red neuronal.
-     * @param idFuente   Identificador de la neurona fuente.
+     * @param red  Red neuronal.
+     * @param idFuente Identificador de la neurona fuente.
      * @return Lista enlazada con las neuronas que NO son alcanzables desde la fuente.
      */
     public ListaEnlazada<Neurona> obtenerZonasAisladas(redNeuronal red, String idFuente) {
@@ -112,7 +112,7 @@ public class AnalizadorConectividad {
      * Método auxiliar para verificar si una lista contiene una neurona (por ID, no por referencia).
      *
      * @param lista Lista de neuronas.
-     * @param n     Neurona a buscar.
+     * @param n Neurona a buscar.
      * @return {@code true} si existe, {@code false} en caso contrario.
      */
     private boolean contiene(ListaEnlazada<Neurona> lista, Neurona n) {
