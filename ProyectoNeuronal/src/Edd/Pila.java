@@ -1,7 +1,7 @@
 package Edd;
 
 /**
- * Implementación de una pila con lista enlazada.
+ * Implementaci&oacute;n de una pila con lista enlazada.
  * Utilizada en el algoritmo DFS.
  *
  * @param <T> Tipo de dato.
@@ -24,7 +24,7 @@ public class Pila<T> {
     /**
      * Desapila el elemento de la cima.
      *
-     * @return El elemento desapilado, o {@code null} si la pila está vacía.
+     * @return El elemento desapilado, o {@code null} si la pila est&aacute vac&iacute;a.
      */
     public T desapilar() {
         if (tope == null) return null;
@@ -34,7 +34,7 @@ public class Pila<T> {
     }
 
     /**
-     * Verifica si la pila está vacía.
+     * Verifica si la pila est&aacute vac&iacute;a.
      *
      * @return {@code true} si no hay elementos.
      */
