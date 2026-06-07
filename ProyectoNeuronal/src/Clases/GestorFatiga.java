@@ -13,9 +13,9 @@ import Edd.Nodo;
 public class GestorFatiga {
 
     /**
-     * Aplica fatiga a toda la red neuronal: cada conexión ve su coeficiente k multiplicado por 1.2.
+     * Aplica fatiga a toda la red neuronal: cada conexi&oacute;n ve su coeficiente k multiplicado por 1.2.
      *
-     * @param red Red neuronal cuyas conexiones se modificarán.
+     * @param red Red neuronal cuyas conexiones se modificar&aacute;n.
      */
     public void aplicarFatiga(redNeuronal red) {
         Nodo<ConexionSinaptica> actual = red.getTodasLasConexiones().getCabeza();
